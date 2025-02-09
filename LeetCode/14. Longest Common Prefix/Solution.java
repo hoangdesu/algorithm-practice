@@ -1,5 +1,5 @@
 class Solution {
-    public String longestCommonPrefix(String[] strs) {
+    public String longestCommonPrefix1(String[] strs) {
         StringBuilder commonPrefix = new StringBuilder();
         String first = strs[0];
 
@@ -17,16 +17,18 @@ class Solution {
         return commonPrefix.toString();
     }
 
+    public String longestCommonPrefix(String[] strs) {
+        // redoing...
+    }
+
     public static void main(String[] args) {
         String[] strs1 = {"flower","flow","flight"};
         String[] strs2 = {"dog","racecar","car"};
 
-        Solution s = new Solution();
-
-        String s1 = s.longestCommonPrefix(strs1);
+        String s1 = longestCommonPrefix(strs1);
         System.out.println(s1);
 
-        System.out.println(s.longestCommonPrefix(strs2));
+        System.out.println(longestCommonPrefix(strs2));
 
         // DIDNT WORK
     }

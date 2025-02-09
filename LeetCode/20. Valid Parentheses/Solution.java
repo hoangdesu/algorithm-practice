@@ -12,6 +12,8 @@ public class Solution {
     public static boolean isValid(String s) {
         Stack<Character> stack = new Stack<>();
         HashMap<Character, Character> pairs = new HashMap<>();
+
+        // use the popped value as the key to get the oppening brace
         pairs.put(')', '(');
         pairs.put(']', '[');
         pairs.put('}', '{');
@@ -27,6 +29,7 @@ public class Solution {
                 Character popped = stack.pop();
                 System.out.println("Popped: " + popped);
                 System.out.println("pair: " + pairs.get(c));
+
                 if (popped != pairs.get(c))
                     return false;
             }
