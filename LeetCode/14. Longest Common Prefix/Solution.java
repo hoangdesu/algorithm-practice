@@ -1,3 +1,5 @@
+// https://leetcode.com/problems/longest-common-prefix/description/
+
 class Solution {
     // first attempt: close call, but didnt check for index within a str length
     // public String longestCommonPrefix1(String[] strs) {
