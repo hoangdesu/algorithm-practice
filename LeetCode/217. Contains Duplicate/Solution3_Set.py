@@ -11,7 +11,6 @@ class Solution:
                 return True
         return False
     
-    
 s = Solution()
 
 print(s.containsDuplicate([1,2,3,1]))
