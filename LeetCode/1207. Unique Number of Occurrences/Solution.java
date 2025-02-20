@@ -20,6 +20,7 @@ public class Solution {
         // Set automatically removes the duplicated values
         Set<Integer> seen = new HashSet<>(map.values());
         
+        // remove the sout on leetcode to improve time complexity
         System.out.println("set size:" + seen.size());
 
         return map.size() == seen.size();
