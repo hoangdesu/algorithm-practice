@@ -17,8 +17,13 @@ public class CreateTemplateFolder {
         String folderName = "SampleProblemFolder";
         if (args.length > 0)
             folderName = String.join(" ", args);
+        
+        if (new File(folderName.trim()).exists()) {
+            System.out.println("Error. Folder exists!");
+            return;
+        }
 
-        new File("./" + folderName).mkdirs();
+        new File("./" + folderName.trim()).mkdirs();
         System.out.printf("Created template folder \"%s\"\n", folderName);
 
         copyFile("TemplateSolution.java", folderName + "/Solution.java");
